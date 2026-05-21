@@ -9,6 +9,7 @@ class Pessoa:
         self.idade = objPessoa["idade"]
         self.renda = objPessoa["renda"]
 
+ 
 
 
    

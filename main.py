@@ -18,6 +18,10 @@ while op.upper() == 'S':
         "renda" : renda
     }
 
+    novaIdade = Pessoa.calculoIdade(idade)
+
+    print(novaIdade)
+
     pessoas.append(Pessoa(objPessoa))
 
     op = input("DESEJA ADICIONAR OUTRA PESSOA? S/N \n")
@@ -25,3 +29,4 @@ while op.upper() == 'S':
 for p in pessoas:
     print(f"{p.nome} - {p.idade} - R$ {p.renda}")
 
+pessoa = Pessoa(objPessoa)
