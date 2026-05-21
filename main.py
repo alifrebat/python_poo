@@ -2,10 +2,31 @@
     CLASSE INICIAL DO PROJETO
 """
 from Pessoa import Pessoa
-
-pessoas = []
-
+from Funcionario import Funcionario
+funcionarios = []
 op = 'S'
+while op.upper() == 'S':
+    nome = input("DIGITE O NOME \n")
+    idade = int(input("DIGITE A IDADE \n"))
+    cargo = input("DIGITE O CARGO \n")
+    salario = float(input("DIGITE O SALÁRIO \n"))
+    objFuncionario = {
+        "nome" : nome,
+        "idade" : idade,
+        "renda": 0.0,
+        "cargo" : cargo,
+        "salario": salario
+    }
+
+    funcionarios.append(Funcionario(objFuncionario))
+       
+    op = input("DESEJA ADICIONAR OUTRO FUNCIONÁRIO? S/N \n")
+
+for f in funcionarios:
+    print(f"{f.nome} - {f.idade} - {f.cargo} - R$ {f.salario} - R$ {Funcionario(objFuncionario).reajuste_Salario(f.salario)}")
+
+"""
+pessoas = []
 
 while op.upper() == 'S':
     nome = input("DIGITE O NOME \n")
@@ -30,3 +51,4 @@ for p in pessoas:
     print(f"{p.nome} - {p.idade} - R$ {p.renda}")
 
 pessoa = Pessoa(objPessoa)
+"""
