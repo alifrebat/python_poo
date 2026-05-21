@@ -13,6 +13,9 @@ class Funcionario(Pessoa):
     
         self.cargo = objFuncionario["cargo"]
         self.salario = objFuncionario["salario"]
+        
+    def exibe_dados(self):
+         print(f"{self.nome} - {self.idade} - {self.cargo} - R$ {self.salario:.2f}")
 
     def reajuste_Salario(self, valor):
         novo_salario = valor + (valor * 0.10)
